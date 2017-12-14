@@ -1,5 +1,5 @@
 import Person from "../../src/practice_2/person.js";
-class worker extends Person{
+class Worker extends Person{
     constructor(name,age){
         super(name,age);
     }
@@ -7,4 +7,4 @@ class worker extends Person{
         return "I am a Worker. I have a job.";
     }
 }
-module.exports = Student;
+module.exports = Worker;
