@@ -14,11 +14,14 @@ class Class{
     }
     appendMember(student){
         student.klass = this;
-    }
-    registerJoinListener(student){
-        if(student.klass === this){
-            console.log("I am Tom. I know Jerry has joined Class 2.")
+        if(this.hasOwnProperty("teachers")){
+            let result ="I am "+this.teachers.name+". I know "+student.name+" has joined Class "+this.number+".";
+            console.log(result);
         }
+
+    }
+   registerJoinListener(teacher){
+        this.teachers=teacher;
     }
     registerAssignLeaderListener(student){
             this.leader = student;
